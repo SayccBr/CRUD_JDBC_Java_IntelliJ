@@ -1,4 +1,4 @@
-package application;
+package BASIC_JDBC;
 
 import DB.DB;
 

@@ -1,10 +1,9 @@
-package application;
+package BASIC_JDBC;
 
 import DB.DB;
 import DB.DbException;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
