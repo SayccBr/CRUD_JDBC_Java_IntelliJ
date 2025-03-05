@@ -87,7 +87,20 @@ public class SellerDAOJDBC implements SellerDAO {
 
     @Override
     public void deleteById(int id) {
+        PreparedStatement ps = null;
+        try{
+            ps = conn.prepareStatement("DELETE FROM seller WHERE id = ?");
 
+            ps.setInt(1, id);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        }
+        finally{
+            DB.closeStatement(ps);
+        }
     }
 
     @Override
